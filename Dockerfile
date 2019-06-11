@@ -3,7 +3,7 @@ FROM openjdk:9-jdk-slim as basecerts
 RUN apt-get update
 
 FROM basecerts as updatecertstore
-RUN apt-get install --no-install-recommends -y -qq ca-certificates-java && \         update-ca-certificates 
+RUN apt-get install --no-install-recommends -y -qq ca-certificates-java && update-ca-certificates 
 
 FROM updatecertstore as importcert
 WORKDIR /home/java
