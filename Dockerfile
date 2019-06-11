@@ -1,4 +1,4 @@
-// Setup pre-req java cert store requirements
+# Setup pre-req java cert store requirements
 FROM openjdk:9-jdk-slim as basecerts
 RUN apt-get update
 
